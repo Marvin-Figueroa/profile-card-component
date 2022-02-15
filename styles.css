@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-dark-cyan: hsl(185, 75%, 39%);
+  --color-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --color-dark-grayish-blue: hsl(227, 10%, 46%);
+  --color-dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg),
+    linear-gradient(var(--color-dark-cyan), var(--color-dark-cyan));
+
+  background-position: left -290px top -270px, right -300px bottom -250px,
+    center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 500px, 500px, cover;
+}
+
+.profile-card {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  max-width: 35rem;
+  width: 85%;
+  text-align: center;
+}
+
+.profile-card__header-image {
+  display: block;
+}
+
+.profile-card__photo {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-card__personal-info {
+  margin-top: 8rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.8rem;
+}
+
+.name {
+  display: inline-block;
+  margin-right: 1.2rem;
+  font-weight: 700;
+  color: var(--color-very-dark-desaturated-blue);
+}
+
+.age {
+  color: var(--color-dark-grayish-blue);
+}
+
+.profile-card__city {
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  color: var(--color-dark-gray);
+}
+
+.profile-card__social-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.8rem 4rem;
+  font-size: 1.8rem;
+  border-top: 1px solid #ddd;
+}
+
+.social-stat-number {
+  font-weight: 700;
+  color: var(--color-very-dark-desaturated-blue);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.social-stat-text {
+  font-size: 1.2rem;
+  color: var(--color-dark-grayish-blue);
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-position: left -280px top -290px, right -225px bottom -370px,
+      center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 600px, 600px, cover;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-size: 750px, 750px, cover;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-size: 800px, 800px, cover;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-size: 850px, 850px, cover;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-position: left -350px top -500px, right -300px bottom -650px,
+      center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 1000px, 1000px, cover;
+  }
+}
